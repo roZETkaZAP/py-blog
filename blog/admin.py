@@ -8,6 +8,7 @@ admin.site.register(User)
 admin.site.register(Commentary)
 admin.site.unregister(Group)
 
+
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ("title", "owner", "created_time")
