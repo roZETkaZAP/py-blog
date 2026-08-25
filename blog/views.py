@@ -17,6 +17,7 @@ class IndexView(generic.ListView):
 class PostDetailView(generic.DetailView):
     model = Post
     template_name = "blog/post_detail.html"
+
     def post(self, request, *args, **kwargs):
         post = self.get_object()
         content = request.POST.get("comment")
