@@ -41,4 +41,3 @@ class PostDetailView(generic.DetailView):
             return redirect(request.path)
 
         return self.get(request, *args, **kwargs)
-
