@@ -7,16 +7,13 @@
   <br>
   <p class="comment-count">{{ post.comments.count }} comment{{ post.comments.count|pluralize }}</p>
   {% if user.is_authenticated %}
-  {% crispy form %}
-  {% csrf_token %}
-  <br>
   <p class="box">Add a new comment</p>
-  <label class="box">
-    <textarea name="comment" class="text-field"></textarea>
-  </label>
+<form action="" method="post" class="box" style="width:865px">
+    {% csrf_token %}
+    {% crispy form %}
+  <button type="submit" value="submit" >Add comment</button>
+</form>
   <br>
-  <button type="submit" value="Send" class="box">Add comment</button>
-    <br>
     {% else %}
     <p class="box">Login to write comments</p>
   {% endif %}

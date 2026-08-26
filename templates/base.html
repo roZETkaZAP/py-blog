@@ -14,7 +14,7 @@
 <body>
   {% block authenticated %}
     {% if user.is_authenticated %}
-      <p>{{user.username}}</p>
+      <p style="position: absolute">{{user.username}}</p>
     {% else %}
       <p style="position:absolute">Not authenticated</p>
     {% endif %}
